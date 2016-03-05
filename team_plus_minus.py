@@ -4,8 +4,8 @@ import pdb
 
 conn = lite.connect('./data/database.sqlite')
 
-regular_season_query = "SELECT * FROM RegularSeasonCompactResults;"
-teams_query = "SELECT * FROM Teams;"
+regular_season_query = "SELECT * FROM RegularSeasonCompactResults"
+teams_query = "SELECT * FROM Teams"
 
 regular_season_df = pd.read_sql(regular_season_query, conn)
 regular_season_df['diff'] = regular_season_df['Wscore'] - regular_season_df['Lscore']
